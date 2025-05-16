@@ -55,10 +55,6 @@ Nhóm thuật toán này hoạt động mà không có bất kỳ hiểu biết 
 
 Cấu hình sử dụng trong thử nghiệm:
 
-**Trạng thái ban đầu**: [[1, 2, 3], [0, 5, 6], [4, 7, 8]]
-
-**Trạng thái mục tiêu**: [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
-
 ### a. Breadth-First Search (BFS)
 
 BFS duyệt theo từng lớp, mở rộng các trạng thái cùng mức độ trước khi đi sâu hơn. Điều này đảm bảo nếu có lời giải thì lời giải tìm được là ngắn nhất (về số bước).
@@ -91,7 +87,7 @@ IDS kết hợp giữa DFS và BFS bằng cách lặp lại DFS với độ sâu
 
 **Nhược điểm**: Có thể lặp lại việc duyệt các trạng thái đã xét ở các vòng trước, gây lãng phí thời gian.
 
-Nhận xét:
+**Nhận xét**:
 
 Trong nhóm này, IDS nổi bật nhờ sự cân bằng giữa tiêu tốn tài nguyên và hiệu quả tìm kiếm. DFS tuy nhanh và nhẹ nhưng dễ sai lệch, trong khi BFS và UCS phù hợp với bài toán có dung lượng trạng thái nhỏ hoặc trung bình do yêu cầu bộ nhớ lớn.
 
@@ -117,7 +113,7 @@ Trong nhóm này, IDS nổi bật nhờ sự cân bằng giữa tiêu tốn tài
 
 Các thuật toán trong nhóm này được gọi là “có thông tin” vì chúng sử dụng một hàm đánh giá (heuristic) để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái mục tiêu. Nhờ đó, quá trình tìm kiếm có thể được dẫn dắt một cách hiệu quả hơn, thay vì dò dẫm như các thuật toán không có thông tin.
 
-Thuật toán Greedy Best-First Search (GBFS)
+## Thuật toán Greedy Best-First Search (GBFS)
 
 GBFS lựa chọn trạng thái kế tiếp dựa trên giá trị heuristic thấp nhất. Nó không quan tâm đến chi phí đã bỏ ra để đến trạng thái đó, mà chỉ tập trung vào việc tiến gần mục tiêu nhanh nhất có thể.
 
@@ -125,7 +121,7 @@ GBFS lựa chọn trạng thái kế tiếp dựa trên giá trị heuristic th�
 
 **Nhược điểm**: Dễ mắc kẹt tại cực trị cục bộ nếu hàm heuristic không đủ chính xác. Không đảm bảo tìm được lời giải tối ưu.
 
-Thuật toán A* (A-Star)
+## Thuật toán A* (A-Star)
 
 A* sử dụng hàm đánh giá f(n) = g(n) + h(n), trong đó:
 
@@ -133,13 +129,13 @@ g(n): chi phí đã đi từ trạng thái khởi đầu đến trạng thái hi
 
 h(n): chi phí ước lượng từ trạng thái hiện tại đến mục tiêu.
 
-Thuật toán này cân bằng giữa chi phí đã bỏ ra và tiềm năng còn lại, nhờ đó có khả năng tìm được lời giải tối ưu nếu hàm h(n) là chấp nhận được (không đánh giá quá cao).
+## Thuật toán này cân bằng giữa chi phí đã bỏ ra và tiềm năng còn lại, nhờ đó có khả năng tìm được lời giải tối ưu nếu hàm h(n) là chấp nhận được (không đánh giá quá cao).
 
 **Ưu điểm**: Tìm được lời giải tối ưu, hoạt động ổn định.
 
 **Nhược điểm**: Tốn nhiều bộ nhớ vì phải lưu trữ nhiều trạng thái trong hàng đợi ưu tiên.
 
-Thuật toán Iterative Deepening A* (IDA*)
+## Thuật toán Iterative Deepening A* (IDA*)
 
 IDA* là sự kết hợp giữa A* và DFS. Thay vì lưu trữ toàn bộ trạng thái như A*, IDA* thực hiện tìm kiếm theo độ sâu tăng dần dựa trên giá trị f(n). Khi vượt quá một giới hạn cho trước, thuật toán sẽ quay lại và tăng giới hạn lên mức mới.
 
@@ -172,8 +168,8 @@ Trong nhóm này, A* là lựa chọn hàng đầu nếu hệ thống có đủ 
     </td>
     <td align="SA">
       <img src="gif/n4.gif" width="100"/><br/>
-      <sub></sub>
-    </td>SA
+      <sub>SA</sub>
+    </td>
     <td align="Beam Search">
       <img src="gif/n5.gif" width="100"/><br/>
       <sub>Beam Search</sub>
@@ -189,7 +185,7 @@ Tìm kiếm cục bộ là chiến lược giải quyết bài toán bằng các
 
 Các thuật toán trong nhóm này thường không đảm bảo tìm được lời giải tối ưu toàn cục mà chỉ hướng đến cực trị cục bộ, trừ khi có cơ chế giúp thoát khỏi các điểm kẹt.
 
-- Simple Hill Climbing (SHC)
+##  Simple Hill Climbing (SHC)
 
 SHC là thuật toán đơn giản nhất trong nhóm này. Nó kiểm tra các trạng thái lân cận theo thứ tự, và nếu tìm thấy một trạng thái tốt hơn, nó chuyển ngay đến đó.
 
@@ -197,7 +193,7 @@ SHC là thuật toán đơn giản nhất trong nhóm này. Nó kiểm tra các 
 
 **Nhược điểm**: Dễ mắc kẹt tại cực trị cục bộ vì không có cơ chế quay lui hoặc đánh giá toàn cục.
 
-- Steepest Ascent Hill Climbing (SAHC)
+## Steepest Ascent Hill Climbing (SAHC)
 
 Khác với SHC, SAHC sẽ đánh giá toàn bộ các trạng thái lân cận và chọn trạng thái tốt nhất để di chuyển đến.
 
@@ -205,7 +201,7 @@ Khác với SHC, SAHC sẽ đánh giá toàn bộ các trạng thái lân cận 
 
 **Nhược điểm**: Tốn nhiều thời gian hơn SHC do phải đánh giá toàn bộ lân cận.
 
-- Random Hill Climbing (RHC)
+## Random Hill Climbing (RHC)
 
 RHC cũng giống SHC nhưng chọn trạng thái lân cận một cách ngẫu nhiên thay vì theo thứ tự. Nếu trạng thái đó tốt hơn, nó sẽ di chuyển.
 
@@ -213,7 +209,7 @@ RHC cũng giống SHC nhưng chọn trạng thái lân cận một cách ngẫu 
 
 **Nhược điểm**: Không ổn định, có thể bỏ lỡ trạng thái tốt nhất do lựa chọn ngẫu nhiên.
 
-- Simulated Annealing (SA)
+## Simulated Annealing (SA)
 
 SA sử dụng một kỹ thuật gọi là “làm nguội” – cho phép chấp nhận cả những trạng thái tệ hơn hiện tại với một xác suất nhất định, nhằm mục tiêu thoát khỏi cực trị cục bộ.
 
@@ -221,7 +217,7 @@ SA sử dụng một kỹ thuật gọi là “làm nguội” – cho phép ch�
 
 **Nhược điểm**: Cần điều chỉnh các tham số (nhiệt độ, tốc độ nguội) hợp lý, thời gian chạy dài hơn.
 
-- Beam Search
+## Beam Search
 
 Thuật toán này giữ một số lượng trạng thái tốt nhất (gọi là beam width) trong mỗi bước, thay vì chỉ một như Hill Climbing.
 
@@ -229,7 +225,7 @@ Thuật toán này giữ một số lượng trạng thái tốt nhất (gọi l
 
 **Nhược điểm**: Nếu beam width quá nhỏ, dễ bị bỏ lỡ trạng thái tốt hơn.
 
-- Genetic Algorithm (GA)
+## Genetic Algorithm (GA)
 
 GA mô phỏng quá trình tiến hóa tự nhiên thông qua chọn lọc, lai ghép và đột biến trên một quần thể trạng thái. Mỗi cá thể đại diện cho một lời giải.
 
@@ -237,7 +233,7 @@ GA mô phỏng quá trình tiến hóa tự nhiên thông qua chọn lọc, lai 
 
 **Nhược điểm**: Rất tốn tài nguyên và thời gian, phụ thuộc vào chiến lược mã hóa và tham số tiến hóa.
 
-Nhận xét:
+**Nhận xét**:
 
 Nhóm Hill Climbing (SHC, SAHC, RHC) có **Ưu điểm** về tốc độ nhưng dễ mắc kẹt tại cực trị cục bộ. SA và GA có khả năng tìm lời giải tốt hơn nhờ chiến lược thoát kẹt thông minh, tuy nhiên cần nhiều thời gian và tài nguyên. Beam Search là lựa chọn cân bằng, nhưng phụ thuộc vào kích thước beam.
 
@@ -245,7 +241,7 @@ Nhóm Hill Climbing (SHC, SAHC, RHC) có **Ưu điểm** về tốc độ nhưng
 
 Nhóm thuật toán này được thiết kế để xử lý các bài toán trong điều kiện không đầy đủ thông tin hoặc không xác định, khi mà trạng thái hiện tại không thể được quan sát hoàn toàn hoặc kết quả của hành động không chắc chắn. Trong 8-Puzzle, điều này được mô phỏng bằng cách tạo ra các trạng thái không rõ ràng (gọi là belief states) và yêu cầu thuật toán tìm lời giải mà tất cả các khả năng đều dẫn tới trạng thái mục tiêu.
 
-AND-OR Search
+## AND-OR Search
 
 AND-OR Search là một chiến lược giải bài toán trong môi trường không xác định bằng cách xây dựng cây tìm kiếm có chứa cả nhánh OR (lựa chọn hành động) và nhánh AND (tất cả các kết quả đều phải thỏa mãn). Thuật toán cố gắng tìm một kế hoạch đảm bảo rằng bất kể điều gì xảy ra, trạng thái mục tiêu vẫn có thể đạt được.
 
@@ -257,7 +253,7 @@ AND-OR Search là một chiến lược giải bài toán trong môi trường k
 
 ![Nhóm 3](gif/andor.gif)
 
-Belief State Search
+## Belief State Search
 
 Trong Belief Search, thay vì làm việc với một trạng thái đơn lẻ, thuật toán duy trì một tập hợp các trạng thái khả dĩ (gọi là belief state), đại diện cho sự không chắc chắn. Khi hành động được thực hiện, tập trạng thái được cập nhật theo luật chuyển trạng thái có xác suất.
 
@@ -270,7 +266,7 @@ Trong Belief Search, thay vì làm việc với một trạng thái đơn lẻ, 
 ![Nhóm 3](gif/belief.gif)
 
 
-Partial Observable Search (POS)
+## Partial Observable Search (POS)
 
 POS là một cải tiến từ Belief Search, nơi hệ thống có thể quan sát được một phần trạng thái (ví dụ: biết số 1 nằm ở góc trên trái). Dựa vào thông tin quan sát được, POS có thể loại bỏ sớm các trạng thái không phù hợp, từ đó thu hẹp không gian tìm kiếm.
 
@@ -282,7 +278,7 @@ POS là một cải tiến từ Belief Search, nơi hệ thống có thể quan 
 
 ![Nhóm 3](gif/pos.gif)
 
-Nhận xét
+**Nhận xét**
 
 POS là phương án tối ưu khi hệ thống có thể cung cấp thông tin quan sát, nhờ khả năng thu hẹp belief state sớm.
 
@@ -318,7 +314,7 @@ Bài toán thỏa ràng buộc (CSP) là một lớp bài toán trong đó mục
 
 Trong ngữ cảnh 8-Puzzle, bài toán CSP được xây dựng bằng cách xem mỗi ô vuông là một biến, và các giá trị cần gán là các số từ 0 đến 8, với những ràng buộc nhất định như: mỗi số chỉ xuất hiện một lần, phải tạo thành trạng thái giải được, và tuân thủ một vài quy tắc hình học cụ thể (ví dụ ô sau lớn hơn ô trước, theo hàng hoặc cột).
 
-Backtracking Search
+## Backtracking Search
 
 Là chiến lược cơ bản nhất, thực hiện việc gán giá trị theo thứ tự và quay lui khi gặp xung đột. Thuật toán duyệt cây trạng thái theo chiều sâu, và quay lại khi phát hiện không thể tiếp tục.
 
@@ -326,7 +322,7 @@ Là chiến lược cơ bản nhất, thực hiện việc gán giá trị theo 
 
 **Nhược điểm**: Tốn thời gian khi không có chiến lược chọn biến tốt.
 
-Forward Checking
+## Forward Checking
 
 Là một mở rộng của Backtracking, sử dụng kỹ thuật kiểm tra trước (forward checking) để loại bỏ giá trị không hợp lệ khỏi miền của các biến chưa gán sau mỗi lần gán. Có thể kết hợp thêm chiến lược chọn biến như:
 
@@ -338,7 +334,7 @@ LCV (Least Constraining Value): chọn giá trị ít làm hẹp lựa chọn c�
 
 **Nhược điểm**: Tốn công tính toán miền hợp lệ mỗi bước.
 
-Min-Conflicts
+## Min-Conflicts
 
 Chiến lược này bắt đầu với một trạng thái đầy đủ (có thể không hợp lệ), và liên tục điều chỉnh các biến gây xung đột sao cho số lượng vi phạm giảm dần.
 
@@ -346,7 +342,7 @@ Chiến lược này bắt đầu với một trạng thái đầy đủ (có th
 
 **Nhược điểm**: Không đảm bảo luôn tìm được nghiệm, có thể kẹt ở trạng thái xung đột cục bộ.
 
-Nhận xét
+**Nhận xét**
 
 Min-Conflicts là lựa chọn lý tưởng trong các bài toán lớn và không yêu cầu tối ưu tuyệt đối.
 
@@ -364,7 +360,7 @@ Học tăng cường là một nhánh quan trọng của trí tuệ nhân tạo,
 
 Trong bài toán 8-Puzzle, tác nhân sẽ bắt đầu từ trạng thái ban đầu và thực hiện các hành động (di chuyển ô trống) để đạt đến trạng thái mục tiêu. Mỗi hành động đều được gán phần thưởng, và thuật toán sẽ học dần cách hành động sao cho tổng phần thưởng tích lũy là cao nhất.
 
-Q-Learning
+## Q-Learning
 
 Đây là một thuật toán cơ bản và phổ biến trong học tăng cường, hoạt động theo nguyên tắc cập nhật giá trị Q (Q-value) cho mỗi cặp trạng thái – hành động. Giá trị này thể hiện “lợi ích kỳ vọng” của hành động đó tại trạng thái đó.
 
@@ -410,7 +406,7 @@ Do không gian trạng thái của 8-Puzzle là khá lớn (trên 180,000 trạn
 
 Tuy vậy, Q-Learning vẫn là một ví dụ rất hữu ích để minh họa cách học từ tương tác, và có thể mở rộng cho các bài toán phức tạp hơn (như robot, game, điều khiển tối ưu...).
 
-Nhận xét tổng kết
+**Nhận xét** tổng kết
 
 Q-Learning phù hợp khi mô hình môi trường không xác định, hoặc không thể biểu diễn rõ bằng luật chuyển trạng thái.
 
