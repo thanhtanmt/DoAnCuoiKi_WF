@@ -100,15 +100,15 @@ Trong nhóm này, IDS nổi bật nhờ sự cân bằng giữa tiêu tốn tài
   <tr>
     <td align="greendy">
       <img src="gif\greendy.gif" width="150"/><br/>
-      <sub>Ảnh 1</sub>
+      <sub>greendy</sub>
     </td>
     <td align="a_star">
       <img src="gif\a_star.gif" width="150"/><br/>
-      <sub>Ảnh 2</sub>
+      <sub>a_star</sub>
     </td>
     <td align="ida_star">
       <img src="gif\ida_star.gif" width="150"/><br/>
-      <sub>Ảnh 3</sub>
+      <sub>ida_star</sub>
     </td>
   </tr>
 </table>
@@ -160,27 +160,27 @@ Trong nhóm này, A* là lựa chọn hàng đầu nếu hệ thống có đủ 
   <tr>
     <td align="RHC">
       <img src="gif\n1.gif" width="100"/><br/>
-      <sub>Ảnh 1</sub>
+      <sub>RHC</sub>
     </td>
     <td align="SHC">
       <img src="gif\n2.gif" width="100"/><br/>
-      <sub>Ảnh 2</sub>
+      <sub>SHC</sub>
     </td>
-    <td align="SA">
+    <td align="GA">
       <img src="gif\n3.gif" width="100"/><br/>
-      <sub>Ảnh 3</sub>
+      <sub>GA</sub>
     </td>
     <td align="SA">
       <img src="gif\n4.gif" width="100"/><br/>
-      <sub>Ảnh 3</sub>
-    </td>
+      <sub></sub>
+    </td>SA
     <td align="Beam Search">
       <img src="gif\n5.gif" width="100"/><br/>
-      <sub>Ảnh 3</sub>
+      <sub>Beam Search</sub>
     </td>
     <td align="SAHC">
       <img src="gif\n6.gif" width="100"/><br/>
-      <sub>Ảnh 3</sub>
+      <sub>SAHC</sub>
     </td>
   </tr>
 </table>
@@ -356,6 +356,10 @@ Backtracking phù hợp để minh họa nguyên lý cơ bản, nhưng không n�
 
 ## 2.6. Nhóm thuật toán học tăng cường (Reinforcement Learning - RL)
 
+**Minh họa:**
+
+![Nhóm 3](gif\q_learing.gif)
+
 Học tăng cường là một nhánh quan trọng của trí tuệ nhân tạo, nơi một tác nhân (agent) học cách ra quyết định thông qua tương tác với môi trường. Thay vì được cung cấp sẵn dữ liệu huấn luyện hoặc hướng dẫn cụ thể, tác nhân phải tự mình khám phá chiến lược tối ưu bằng cách thử – sai và tối đa hóa tổng phần thưởng nhận được.
 
 Trong bài toán 8-Puzzle, tác nhân sẽ bắt đầu từ trạng thái ban đầu và thực hiện các hành động (di chuyển ô trống) để đạt đến trạng thái mục tiêu. Mỗi hành động đều được gán phần thưởng, và thuật toán sẽ học dần cách hành động sao cho tổng phần thưởng tích lũy là cao nhất.
@@ -365,10 +369,6 @@ Q-Learning
 Đây là một thuật toán cơ bản và phổ biến trong học tăng cường, hoạt động theo nguyên tắc cập nhật giá trị Q (Q-value) cho mỗi cặp trạng thái – hành động. Giá trị này thể hiện “lợi ích kỳ vọng” của hành động đó tại trạng thái đó.
 
 Hàm cập nhật Q:
-
-css
-
-Sao chépChỉnh sửa
 
 Q(s, a) ← Q(s, a) + α [r + γ max(Q(s’, a’)) - Q(s, a)]
 
@@ -417,11 +417,6 @@ Q-Learning phù hợp khi mô hình môi trường không xác định, hoặc k
 Trong 8-Puzzle, thuật toán này đóng vai trò mô phỏng và minh họa, không phải là lựa chọn tối ưu về hiệu suất.
 
 Với đủ thời gian huấn luyện và dữ liệu tương tác, Q-Learning vẫn có khả năng hội tụ về chính sách giải đúng.
-
-**Minh họa:**
-
-![Nhóm 3](gif\q_learing.gif)
-
 
 ##  Tổng so sánh giữa các nhóm thuật toán
 
