@@ -99,15 +99,15 @@ Trong nhóm này, IDS nổi bật nhờ sự cân bằng giữa tiêu tốn tài
 <table>
   <tr>
     <td align="greendy">
-      <img src="gif\greendy.gif" width="150"/><br/>
+      <img src="gif/greendy.gif" width="150"/><br/>
       <sub>greendy</sub>
     </td>
     <td align="a_star">
-      <img src="gif\a_star.gif" width="150"/><br/>
+      <img src="gif/a_star.gif" width="150"/><br/>
       <sub>a_star</sub>
     </td>
     <td align="ida_star">
-      <img src="gif\ida_star.gif" width="150"/><br/>
+      <img src="gif/ida_star.gif" width="150"/><br/>
       <sub>ida_star</sub>
     </td>
   </tr>
@@ -159,27 +159,27 @@ Trong nhóm này, A* là lựa chọn hàng đầu nếu hệ thống có đủ 
 <table>
   <tr>
     <td align="RHC">
-      <img src="gif\n1.gif" width="100"/><br/>
+      <img src="gif/n1.gif" width="100"/><br/>
       <sub>RHC</sub>
     </td>
     <td align="SHC">
-      <img src="gif\n2.gif" width="100"/><br/>
+      <img src="gif/n2.gif" width="100"/><br/>
       <sub>SHC</sub>
     </td>
     <td align="GA">
-      <img src="gif\n3.gif" width="100"/><br/>
+      <img src="gif/n3.gif" width="100"/><br/>
       <sub>GA</sub>
     </td>
     <td align="SA">
-      <img src="gif\n4.gif" width="100"/><br/>
+      <img src="gif/n4.gif" width="100"/><br/>
       <sub></sub>
     </td>SA
     <td align="Beam Search">
-      <img src="gif\n5.gif" width="100"/><br/>
+      <img src="gif/n5.gif" width="100"/><br/>
       <sub>Beam Search</sub>
     </td>
     <td align="SAHC">
-      <img src="gif\n6.gif" width="100"/><br/>
+      <img src="gif/n6.gif" width="100"/><br/>
       <sub>SAHC</sub>
     </td>
   </tr>
@@ -255,7 +255,7 @@ AND-OR Search là một chiến lược giải bài toán trong môi trường k
 
 **Minh họa:**
 
-![Nhóm 3](gif\andor.gif)
+![Nhóm 3](gif/andor.gif)
 
 Belief State Search
 
@@ -267,7 +267,7 @@ Trong Belief Search, thay vì làm việc với một trạng thái đơn lẻ, 
 
 **Minh họa:**
 
-![Nhóm 3](gif\belief.gif)
+![Nhóm 3](gif/belief.gif)
 
 
 Partial Observable Search (POS)
@@ -280,7 +280,7 @@ POS là một cải tiến từ Belief Search, nơi hệ thống có thể quan 
 
 **Minh họa:**
 
-![Nhóm 3](gif\pos.gif)
+![Nhóm 3](gif/pos.gif)
 
 Nhận xét
 
@@ -295,19 +295,19 @@ AND-OR Search đơn giản về mặt xử lý, nhưng không hiệu quả trong
 <table>
   <tr>
     <td align="backtracking">
-      <img src="gif\backtracking.gif" width="150"/><br/>
+      <img src="gif/backtracking.gif" width="150"/><br/>
       <sub>Ảnh 1</sub>
     </td>
     <td align="forwarc checking">
-      <img src="gif\forward.gif" width="150"/><br/>
+      <img src="gif/forward.gif" width="150"/><br/>
       <sub>Ảnh 2</sub>
     </td>
     <td align="min conflicts">
-      <img src="gif\min.gif" width="150"/><br/>
+      <img src="gif/min.gif" width="150"/><br/>
       <sub>Ảnh 3</sub>
     </td>
     <td align="thay đổi cấu trúc thuật toán để giải 8puzzle thường">
-      <img src="gif\5.gif" width="150"/><br/>
+      <img src="gif/5.gif" width="150"/><br/>
       <sub>Ảnh 3</sub>
     </td>
   </tr>
@@ -358,7 +358,7 @@ Backtracking phù hợp để minh họa nguyên lý cơ bản, nhưng không n�
 
 **Minh họa:**
 
-![Nhóm 3](gif\q_learing.gif)
+![Nhóm 3](gif/q_learing.gif)
 
 Học tăng cường là một nhánh quan trọng của trí tuệ nhân tạo, nơi một tác nhân (agent) học cách ra quyết định thông qua tương tác với môi trường. Thay vì được cung cấp sẵn dữ liệu huấn luyện hoặc hướng dẫn cụ thể, tác nhân phải tự mình khám phá chiến lược tối ưu bằng cách thử – sai và tối đa hóa tổng phần thưởng nhận được.
 
@@ -433,7 +433,7 @@ Với đủ thời gian huấn luyện và dữ liệu tương tác, Q-Learning 
 
 **Biểu đồ minh họa**
 
-![Nhóm 3](gif\chart_pic.png)
+![Nhóm 3](gif/chart_pic.png)
 
 ## Hướng dẫn cách sử dụng 
 **Yêu cầu tối thiểu là python 3.6**
@@ -443,19 +443,19 @@ Với đủ thời gian huấn luyện và dữ liệu tương tác, Q-Learning 
 
 -  Bạn có thể thay đổi nhóm thuật toán ở phần tab
 
-![Nhóm 3](gif\tab.png)
+![Nhóm 3](gif/tab.png)
 
 -  Có thể thay đổi các thứ tự các puzzle bằng nút random
 
-![Nhóm 3](gif\random.png)
+![Nhóm 3](gif/random.png)
 
 -  Nếu bạn muốn tự nhập thứ tự puzzle mà mình muốn thì nhập vào đây
 
-![Nhóm 3](gif\nhap.png)
+![Nhóm 3](gif/nhap.png)
 
 -  Cuối cùng bạn chỉ cần chọn thuận toán để chạy
 
-![Nhóm 3](gif\nhan.png)
+![Nhóm 3](gif/nhan.png)
 
 ## 3. Tác giả
 
